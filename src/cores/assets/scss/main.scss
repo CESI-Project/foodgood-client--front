@@ -1,0 +1,13 @@
+@import "colors";
+@import "variables";
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $white;
+	color: $text;
+	font-family: Inter, serif;
+	font-size: $font-medium;
+}
