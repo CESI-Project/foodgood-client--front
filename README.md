@@ -1,8 +1,8 @@
-# FoodGood Client Front
+FoodGood Client Front
 
-## Setup Web
+# Setup Web
 
-### With NVM
+## With NVM
 
 Install [NVM](https://github.com/nvm-sh/nvm)
 
@@ -11,51 +11,57 @@ nvm install
 nvm use
 ```
 
-### Without NVM
+## Without NVM
 
 Install the same [Node](https://nodejs.org/en) version of the `.nvmrc` file.
 
-### Dependencies
+## Dependencies
 
 ```shell
 npm ci
 ```
 
-### Launch project
+## Launch project
 
 ```shell
 npm run start
 ```
 
-### Launch test
+## Launch test
 
 ```shell
 npm run test
 ```
 
-## Setup Mobile
+# Setup Mobile
 
-### Create Android App
+## Create Android App
 
 ```shell
 npx cap add android
 ```
 
-### Sync with code
+## Sync with code
 
 ```shell
 npx cap sync
 ```
 
-### Use Android Studio
+## Use Android Studio
 
 Open `/android` and create Virtual Device [Android Studio](https://developer.android.com/studio/run/managing-avds)
 
 You can run App with Android Studio :
-![img.png](img.png)
+![img.png](https://capacitorjs.com/docs/assets/images/running-a42ce0daf3b9d2dd5ee6b94d1c378220.png)
 
 Or with command line :
 
 ```shell
 npx cap run android
+```
+
+# Story Book
+
+```shell
+npm run storybook
 ```
