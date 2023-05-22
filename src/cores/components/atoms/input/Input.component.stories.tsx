@@ -3,10 +3,6 @@ import { InputComponent } from './Input.component';
 import { SearchIcon } from '../../../assets/images/icons';
 
 const meta: Meta<typeof InputComponent> = {
-	/* 👇 The title prop is optional.
-	 * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-	 * to learn how to generate automatic titles
-	 */
 	title: 'Input',
 	component: InputComponent,
 };
