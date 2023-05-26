@@ -12,3 +12,10 @@ export const postLogin = ({ email, password }: User): Promise<User> =>
 		// }
 		response.json(),
 	);
+
+export const postRegister = ({ email, password }: User): Promise<User> =>
+	fetch(`${BACKEND_URI}/user/login`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ email, password }),
+	}).then(response => response.json());

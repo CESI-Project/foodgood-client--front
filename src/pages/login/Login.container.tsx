@@ -1,14 +1,15 @@
 import type { FormEvent } from 'react';
 import { toast } from 'react-toastify';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { LoginComponent } from './Login.component';
-import { useLogin } from '../../cores/hooks/react-query/useLogin';
+import { useUser } from '../../cores/hooks/react-query/useUser.ts';
 import type { User } from '../../cores/models/User';
 import { useUserContext } from '../../cores/contexts/User.context';
 
 export const LoginContainer = () => {
-	const { mutate, isError, isSuccess } = useLogin();
+	const { mutate, isError, isSuccess } = useUser();
 	const { setIsAuthenticated } = useUserContext();
+	const navigate = useNavigate();
 
 	const onLogin = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -21,17 +22,17 @@ export const LoginContainer = () => {
 
 	if (isSuccess) {
 		setIsAuthenticated(true);
-		return (
-			<Navigate
-				to='/accueil'
-				replace
-			/>
-		);
+		navigate('/accueil');
 	}
 
 	if (isError) {
 		toast.error('Authentification échouée', { toastId: 1 });
 	}
 
-	return <LoginComponent onLogin={onLogin} />;
+	return (
+		<LoginComponent
+			onLogin={onLogin}
+			navigate={navigate}
+		/>
+	);
 };

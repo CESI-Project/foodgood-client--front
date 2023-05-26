@@ -1,22 +1,21 @@
 import type { FormEvent } from 'react';
+import type { NavigateFunction } from 'react-router-dom';
 import { LogoTitleIcon } from '../../cores/assets/images/icons';
 import { InputFormComponent } from '../../cores/components/molecules/input-form/InputForm.component';
 import { ButtonComponent } from '../../cores/components/atoms/button/Button.component';
-import './Login.component.scss';
-import type { NavigateFunction } from 'react-router-dom';
 
-interface LoginComponentProps {
-	onLogin: (e: FormEvent<HTMLFormElement>) => void;
+interface RegisterComponentProps {
+	onRegister: (e: FormEvent<HTMLFormElement>) => void;
 	navigate: NavigateFunction;
 }
 
-export const LoginComponent = ({ onLogin, navigate }: LoginComponentProps) => (
+export const RegisterComponent = ({ onRegister, navigate }: RegisterComponentProps) => (
 	<div className='login'>
 		<LogoTitleIcon />
 		<div className='login__title'>Bienvenue sur GoodFood</div>
 		<form
 			id='login'
-			onSubmit={onLogin}
+			onSubmit={onRegister}
 			className='login__form'
 		>
 			<InputFormComponent
@@ -31,16 +30,22 @@ export const LoginComponent = ({ onLogin, navigate }: LoginComponentProps) => (
 				type='password'
 				name='password'
 			/>
+			<InputFormComponent
+				title='Téléphone'
+				placeholder='07.00.01.02.03'
+				type='text'
+				name='phoneNumber'
+			/>
+			<InputFormComponent
+				title='Adresse'
+				placeholder='25 rue de la paix'
+				type='text'
+				name='address'
+			/>
 			<div className='login__button'>
 				<ButtonComponent
-					type='submit'
-					designType='primary'
-				>
-					Se connecter
-				</ButtonComponent>
-				<ButtonComponent
 					type='button'
-					designType='secondary'
+					designType='primary'
 					onClick={() => navigate('/register')}
 				>
 					S'inscrire
