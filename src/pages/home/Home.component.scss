@@ -1,6 +1,10 @@
+@import "src/cores/assets/scss/main";
+
 .home {
 	&__location {
 		margin: 1.6rem 0 0.8rem;
+		font-size: $font-large;
+		font-weight: 600;
 	}
 
 	.input {

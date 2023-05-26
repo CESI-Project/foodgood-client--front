@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LogoTitleIcon, SearchIcon } from '../../cores/assets/images/icons';
+import { SearchIcon } from '../../cores/assets/images/icons';
 import { InputComponent } from '../../cores/components/atoms/input/Input.component';
 import { FoodCategoryBar } from '../../cores/components/molecules/food-category-bar/FoodCategoryBar.component';
 import { RestaurantItemComponent } from '../../cores/components/atoms/restaurant-item/RestaurantItem.component';
@@ -9,7 +9,6 @@ interface HomeComponentProps {}
 
 export const HomeComponent = () => (
 	<div className='home'>
-		<LogoTitleIcon />
 		<div className='home__location'>25 rue de la paix</div>
 		<InputComponent
 			placeholder='Restaurant ...'

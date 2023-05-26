@@ -1,6 +1,5 @@
 import type { FormEvent } from 'react';
 import type { NavigateFunction } from 'react-router-dom';
-import { LogoTitleIcon } from '../../cores/assets/images/icons';
 import { InputFormComponent } from '../../cores/components/molecules/input-form/InputForm.component';
 import { ButtonComponent } from '../../cores/components/atoms/button/Button.component';
 import './Login.component.scss';
@@ -12,7 +11,6 @@ interface LoginComponentProps {
 
 export const LoginComponent = ({ onLogin, navigate }: LoginComponentProps) => (
 	<div className='login'>
-		<LogoTitleIcon />
 		<div className='login__title'>Bienvenue sur GoodFood</div>
 		<form
 			id='login'
