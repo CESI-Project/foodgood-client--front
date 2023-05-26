@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { FoodCategoryComponent } from './FoodCategory.component';
+import { FoodCategoryItemComponent } from './FoodCategoryItem.component';
 import { FOOD_CATEGORY } from '../../../enum/FoodCategory.enum';
 
-describe('FoodCategoryComponent', () => {
+describe('FoodCategoryComponentItem', () => {
 	it('renders the food category component with correct image source, alt text and name', () => {
 		const foodCategory = FOOD_CATEGORY.PIZZA;
-		render(<FoodCategoryComponent foodCategory={foodCategory} />);
+		render(<FoodCategoryItemComponent foodCategory={foodCategory} />);
 		const imageElement = screen.getByAltText(foodCategory);
 		const nameElement = screen.getByText(foodCategory);
 		expect(nameElement).toBeInTheDocument();

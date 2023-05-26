@@ -2,7 +2,7 @@ import type { FormEvent } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { LoginComponent } from './Login.component';
-import { useUser } from '../../cores/hooks/react-query/useUser.ts';
+import { useUser } from '../../cores/hooks/react-query/useUser';
 import type { User } from '../../cores/models/User';
 import { useUserContext } from '../../cores/contexts/User.context';
 

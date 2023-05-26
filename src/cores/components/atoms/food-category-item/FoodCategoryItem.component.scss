@@ -1,7 +1,8 @@
 @import "src/cores/assets/scss/main";
 
-.food-category {
+.food-category-item {
 	width: 7.2rem;
+	min-width: 7.2rem;
 	height: 7.2rem;
 	border-radius: 0.4rem;
 	box-shadow: 0 0.1rem 0.4rem $grey;

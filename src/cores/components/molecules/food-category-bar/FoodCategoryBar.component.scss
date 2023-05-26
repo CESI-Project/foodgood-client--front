@@ -1,0 +1,9 @@
+.food-category-bar {
+	display: flex;
+	width: 100%;
+	overflow-x: auto;
+
+	.food-category-item {
+		margin-right: 0.8rem;
+	}
+}

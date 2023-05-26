@@ -4,6 +4,7 @@ import { RestaurantItemComponent } from './RestaurantItem.component';
 describe('RestaurantItemComponent', () => {
 	it('renders the restaurant item component with correct title, image, address, and rating', () => {
 		const restaurantItemProps = {
+			id: 1,
 			title: 'Restaurant Name',
 			image: 'restaurant.jpg',
 			address: '123 Main Street',
@@ -12,6 +13,7 @@ describe('RestaurantItemComponent', () => {
 
 		render(
 			<RestaurantItemComponent
+				id={restaurantItemProps.id}
 				title={restaurantItemProps.title}
 				image={restaurantItemProps.image}
 				address={restaurantItemProps.address}

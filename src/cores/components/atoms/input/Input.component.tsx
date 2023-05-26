@@ -1,11 +1,11 @@
 import './Input.component.scss';
-import type { ReactNode } from 'react';
+import type { ReactComponentElement } from 'react';
 
 export type InputType = 'search' | 'email' | 'password' | 'text';
 
 interface InputComponentProps {
 	placeholder: string;
-	icon?: ReactNode;
+	icon?: ReactComponentElement<any>;
 	type?: InputType;
 	name?: string;
 	onChange?: () => void;
