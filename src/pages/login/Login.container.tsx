@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { LoginComponent } from './Login.component';
 import { useUser } from '../../cores/hooks/react-query/useUser';
 import type { User } from '../../cores/models/User';
-import { useUserContext } from '../../cores/contexts/User.context';
+import { useUserContext } from '../../cores/contexts/user/User.context';
 
 export const LoginContainer = () => {
 	const { mutate, isError, isSuccess } = useUser();

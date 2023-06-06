@@ -1,30 +1,33 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import { FoodItemComponent } from './FoodItem.component';
 
 describe('FoodItemComponent', () => {
-	it('renders the food item component with correct title, description, price, and image', () => {
+	it('renders the food item component with correct name, description, price, and image', () => {
 		const foodItemProps = {
-			title: 'Pizza Margherita',
+			name: 'Pizza Margherita',
 			description: 'Delicious pizza with mozzarella and basil',
 			price: 8.99,
 			image: 'pizza.jpg',
+			onSubmit: vi.fn(),
 		};
 
 		render(
 			<FoodItemComponent
-				title={foodItemProps.title}
+				name={foodItemProps.name}
 				description={foodItemProps.description}
 				price={foodItemProps.price}
 				image={foodItemProps.image}
+				onSelect={foodItemProps.onSubmit}
 			/>,
 		);
 
-		const titleElement = screen.getByText(foodItemProps.title);
+		const nameElement = screen.getByText(foodItemProps.name);
 		const descriptionElement = screen.getByText(foodItemProps.description);
 		const priceElement = screen.getByText(`${foodItemProps.price} €`);
-		const imageElement = screen.getByAltText(foodItemProps.title);
+		const imageElement = screen.getByAltText(foodItemProps.name);
 
-		expect(titleElement).toBeInTheDocument();
+		expect(nameElement).toBeInTheDocument();
 		expect(descriptionElement).toBeInTheDocument();
 		expect(priceElement).toBeInTheDocument();
 		expect(imageElement).toBeInTheDocument();

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
-import type { User } from '../models/User';
+import type { User } from '../../models/User';
 import { UserContextProvider } from './User.context';
 
 interface UserContextProviderProps {

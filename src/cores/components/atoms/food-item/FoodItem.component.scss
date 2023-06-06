@@ -7,7 +7,11 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 0.8rem;
+	border: none;
 	border-bottom: 0.1rem solid $grey;
+	background: $white;
+	cursor: pointer;
+	text-align: start;
 
 	&__content {
 		display: flex;
@@ -15,7 +19,7 @@
 		justify-content: space-between;
 		padding: 0.8rem 0;
 
-		&__title {
+		&__name {
 			font-size: $font-large;
 			font-weight: 600;
 		}

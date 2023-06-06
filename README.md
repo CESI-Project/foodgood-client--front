@@ -33,6 +33,12 @@ npm run start
 npm run test
 ```
 
+## Launch JSON Server
+
+```shell
+npm run start:server
+```
+
 # Setup Mobile
 
 ## Create Android App

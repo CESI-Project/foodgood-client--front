@@ -1,24 +1,30 @@
 import './FoodItem.component.scss';
 
 interface FoodItemComponentProps {
-	title: string;
-	description: string;
-	price: number;
-	image: string;
+	id?: string;
+	name?: string;
+	description?: string;
+	price?: number;
+	image?: string;
+	onSelect: () => void;
 }
 
-export const FoodItemComponent = ({ title, description, price, image }: FoodItemComponentProps) => (
-	<div className='food-item'>
+export const FoodItemComponent = ({ id, name, description, price, image, onSelect }: FoodItemComponentProps) => (
+	<button
+		id={id}
+		key={id}
+		type='button'
+		className='food-item'
+		onClick={() => onSelect()}
+	>
 		<div className='food-item__content'>
-			<div className='food-item__content__title'>{title}</div>
+			<div className='food-item__content__name'>{name}</div>
 			<div className='food-item__content__description'>{description}</div>
 			<div className='food-item__content__price'>{price} €</div>
 		</div>
-		<div className='food-item__image'>
-			<img
-				src={image}
-				alt={title}
-			/>
-		</div>
-	</div>
+		<img
+			src={image}
+			alt={name}
+		/>
+	</button>
 );

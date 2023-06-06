@@ -2,24 +2,24 @@ import { StarIcon } from '../../../assets/images/icons';
 import './RestaurantItem.component.scss';
 
 interface RestaurantItemComponentProps {
-	id: number;
-	title: string;
-	image: string;
-	address: string;
-	rating: number;
+	id?: string;
+	name?: string;
+	image?: string;
+	address?: string;
+	rating?: number;
 }
 
-export const RestaurantItemComponent = ({ title, image, address, rating, id }: RestaurantItemComponentProps) => (
+export const RestaurantItemComponent = ({ name, image, address, rating, id }: RestaurantItemComponentProps) => (
 	<div
 		className='restaurant-item'
 		key={id}
 	>
 		<img
 			src={image}
-			alt={title}
+			alt={name}
 		/>
 		<div className='restaurant-item__content'>
-			<div className='restaurant-item__content__title'>{title}</div>
+			<div className='restaurant-item__content__name'>{name}</div>
 			<div className='restaurant-item__content__rating'>
 				{rating}
 				<StarIcon />
