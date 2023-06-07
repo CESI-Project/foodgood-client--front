@@ -4,7 +4,7 @@ import type { Basket } from '../../models/Basket';
 export interface BasketInfo {
 	currentBasket?: Basket;
 	setCurrentBasket: (basket: Basket | undefined) => void;
-	addBasket: ({ restaurantId, foods }: Basket) => void;
+	addBasket: ({ userId, restaurantId, restaurantName, foods }: Basket) => void;
 	deleteBasket: () => void;
 }
 

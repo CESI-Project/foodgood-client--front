@@ -15,6 +15,7 @@ export const RestaurantContainer = () => {
 			id={food.id}
 			key={food.id}
 			restaurantId={food.restaurantId}
+			restaurantName={restaurant?.name}
 			name={food.name}
 			image={food.image}
 			price={food.price}
@@ -24,12 +25,12 @@ export const RestaurantContainer = () => {
 
 	return (
 		<RestaurantComponent
-			id={restaurant?.id}
-			name={restaurant?.name}
-			image={restaurant?.image}
-			address={restaurant?.address}
-			rating={restaurant?.rating}
-			foodItems={foodItems}
-		/>
+				id={restaurant?.id}
+				name={restaurant?.name}
+				image={restaurant?.image}
+				address={restaurant?.address}
+				rating={restaurant?.rating}
+				foodItems={foodItems}
+			/>
 	);
 };

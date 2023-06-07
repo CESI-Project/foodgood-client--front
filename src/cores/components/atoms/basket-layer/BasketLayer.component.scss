@@ -1,0 +1,16 @@
+@import "src/cores/assets/scss/main";
+
+.basket-layer {
+	position: sticky;
+	bottom: 6rem;
+	left: 0;
+	width: 100%;
+	height: 6.4rem;
+	padding: 1.2rem;
+	background-color: $primary;
+
+	&__restaurant-name {
+		padding-bottom: 0.2rem;
+		font-weight: bold;
+	}
+}

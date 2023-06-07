@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { useState } from 'react';
 import type { Basket } from '../../models/Basket';
 import { BasketContextProvider } from './Basket.context';
-import type { Food } from '../../models/Food.ts';
+import type { Food } from '../../models/Food';
 
 interface BasketProviderProps {
 	children: ReactNode;
@@ -18,16 +18,16 @@ export const BasketInfoProvider = ({ children }: BasketProviderProps) => {
 		sessionStorage.removeItem('basket');
 	};
 
-	const addBasket = ({ id, userId, restaurantId, foods }: Basket) => {
+	const addBasket = ({ userId, restaurantId, restaurantName, foods }: Basket) => {
 		if (restaurantId === basket.restaurantId) {
 			const newFoods = [...basket.foods, ...(foods as Food[])];
-			setCurrentBasket({ id, userId, restaurantId, foods: newFoods });
-			sessionStorage.setItem('basket', JSON.stringify({ id, userId, restaurantId, foods: newFoods }));
+			setCurrentBasket({ userId, restaurantId, restaurantName, foods: newFoods });
+			sessionStorage.setItem('basket', JSON.stringify({ userId, restaurantId, restaurantName, foods: newFoods }));
 			return;
 		}
 
-		setCurrentBasket({ id, userId, restaurantId, foods });
-		sessionStorage.setItem('basket', JSON.stringify({ id, userId, restaurantId, foods }));
+		setCurrentBasket({ userId, restaurantId, restaurantName, foods });
+		sessionStorage.setItem('basket', JSON.stringify({ userId, restaurantId, restaurantName, foods }));
 	};
 
 	const context = {

@@ -12,7 +12,7 @@ type Story = StoryObj<typeof FoodItemComponent>;
 export const Primary: Story = {
 	args: {
 		id: '1',
-		title: 'Pizza Margherita',
+		name: 'Pizza Margherita',
 		description: 'Pizza with tomato sauce and mozzarella',
 		price: 10,
 		image:
