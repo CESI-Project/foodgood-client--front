@@ -1,0 +1,36 @@
+@import "src/cores/assets/scss/main";
+
+.account-textbox{
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.textbox-name{
+    font-size: $font-title-small;
+    border-bottom: 0.1rem solid $primary;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.account-information{
+    width: 40%;
+    text-align: left;
+    background-color: white;
+    border: 0.1rem $primary solid;
+    font-size: $font-large;
+    padding: 1rem;
+    height: 2.5rem;
+    margin-right: 2%;
+}
+
+.textbox-value{
+    display: table;
+    height: 2.5rem;
+}
+
+span{
+    display: table-cell;
+    vertical-align: middle;
+}
