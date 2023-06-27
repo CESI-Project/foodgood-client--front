@@ -14,6 +14,6 @@ export const Primary: Story = {
 		id:"1",
         name:"mail",
         value:"jaques@random.com",
-		onSelect: ()=> console.log("bite")
+		onSave: ()=> console.log("bite"),
 	},
 };

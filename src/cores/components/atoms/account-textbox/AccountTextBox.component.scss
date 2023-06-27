@@ -2,9 +2,7 @@
 
 .account-textbox{
     width: 80%;
-    margin-left: 5%;
     margin-right: 5%;
-    
 }
 
 .textbox-name{
@@ -15,22 +13,28 @@
 }
 
 .account-information{
-    width: 40%;
+    width: 100%;
     text-align: left;
     background-color: white;
     border: 0.1rem $primary solid;
     font-size: $font-large;
-    padding: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
     height: 2.5rem;
     margin-right: 2%;
 }
 
 .textbox-value{
-    display: table;
-    height: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-span{
-    display: table-cell;
-    vertical-align: middle;
+#sauvegarder{
+    height: 3rem;
+    margin-right: 2%;
 }
+
+#annuler{
+    height: 3rem;
+}
+

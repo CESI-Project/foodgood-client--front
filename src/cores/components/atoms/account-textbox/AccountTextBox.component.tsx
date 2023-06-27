@@ -6,56 +6,70 @@ interface AccountTextboxProps {
 	id?: string;
 	name?: string;
     value?:string;
-	onSelect: () => void;
+	inputtype?: string;
+	onSave: () => void;
 }
 
 
 
 
 
-export const AccountTextBox = ({ id, name, value,  onSelect }: AccountTextboxProps) => {
+export const AccountTextBox = ({ id, name, value, onSave, inputtype }: AccountTextboxProps) => {
 	const [isInput, setIsInput] = useState(0);
 	const [inputValue, setInputValue] = useState(value);
+	const [DisplayValue, setDisplayValue] = useState(inputValue);
 
 	const onInputClick = () => {
-		onSelect();
 		setIsInput(1);
+		setDisplayValue(inputValue);
+		console.log(inputValue)
 	};
 
 	const onSaveClick = () => {
+		setInputValue(DisplayValue);
 		setIsInput(0);
-		//add save on base here
+		onSave();
+		console.log(inputValue)
 	}
+
 
 	
     return (<div className='account-textbox'>
         <div className="textbox-name">{name}</div>
 		{isInput===0 ? (
 			<div
-			id={id}
 			key={id}
 			className='account-information'
 			onClick={() =>onInputClick()}
 		>
-			<div className='textbox-value'><span>{inputValue}</span></div>
+			<div className='textbox-value'>{inputValue}</div>
 		</div>)
 		:
 			<div>
+				
 			<input
 			id={id}
 			key={id}
-			type='text'
-			value={inputValue}
+			type= {inputtype? inputtype : 'text'}
+			value={DisplayValue}
 			className='account-information'
 			autoFocus
-			onChange={(e) => setInputValue(e.target.value)}
+			onChange={(e) => setDisplayValue(e.target.value)}
 			/>
+			
 			<ButtonComponent 
 			children="sauvegarder"
 			key={id}
 			type='button'
 			designType='primary'
-			onClick={() =>onSaveClick}/> 
+			onClick={() =>onSaveClick()}/> 
+
+			<ButtonComponent 
+			children="annuler"
+			key={id}
+			type='button'
+			designType='secondary'
+			onClick={() =>setIsInput(0)}/> 
 			</div>
 		}
 	

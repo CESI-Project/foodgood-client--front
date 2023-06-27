@@ -8,7 +8,7 @@ import { HomeContainer } from './pages/home/Home.container';
 import { HeaderComponent } from './cores/components/atoms/header/Header.component';
 import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
-import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
+import { AccountContainer } from './pages/account/Account.container';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -31,8 +31,12 @@ export const App = () => (
 					path='/restaurant/:id'
 					element={<RestaurantContainer />}
 				/>
+				<Route
+					path='/Account'
+					element={<AccountContainer />}
+			/>
 			</Routes>
-			<BasketLayerContainer />
+			
 		</BasketInfoProvider>
 	</UserInfoProvider>
 );
