@@ -9,6 +9,7 @@ import { HeaderComponent } from './cores/components/atoms/header/Header.componen
 import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
 import { AccountContainer } from './pages/account/Account.container';
+import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -36,7 +37,7 @@ export const App = () => (
 					element={<AccountContainer />}
 			/>
 			</Routes>
-			
+			<BasketLayerContainer />
 		</BasketInfoProvider>
 	</UserInfoProvider>
 );
