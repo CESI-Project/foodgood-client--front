@@ -8,6 +8,7 @@ import { HomeContainer } from './pages/home/Home.container';
 import { HeaderComponent } from './cores/components/atoms/header/Header.component';
 import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
+import { AccountContainer } from './pages/account/Account.container';
 import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
 import { ConfirmationContainer } from './pages/confirmation/Confirmation.container';
 
@@ -33,9 +34,13 @@ export const App = () => (
 					element={<RestaurantContainer />}
 				/>
 				<Route
+					path='/Account'
+					element={<AccountContainer />}
+			  />
+        <Route
 					path='/order-confirmation'
 					element={< ConfirmationContainer/>}
-					/>
+        />
 			</Routes>
 			<BasketLayerContainer />
 		</BasketInfoProvider>

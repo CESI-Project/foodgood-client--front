@@ -1,0 +1,40 @@
+@import "src/cores/assets/scss/main";
+
+.account-textbox{
+    width: 80%;
+    margin-right: 5%;
+}
+
+.textbox-name{
+    font-size: $font-title-small;
+    border-bottom: 0.1rem solid $primary;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.account-information{
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border: 0.1rem $primary solid;
+    font-size: $font-large;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    margin-right: 2%;
+}
+
+.textbox-value{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#sauvegarder{
+    height: 3rem;
+    margin-right: 2%;
+}
+
+#annuler{
+    height: 3rem;
+}
+
