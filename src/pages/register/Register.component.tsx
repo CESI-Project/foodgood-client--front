@@ -29,6 +29,18 @@ export const RegisterComponent = ({ onRegister, navigate }: RegisterComponentPro
 				name='password'
 			/>
 			<InputFormComponent
+				title='Prénom'
+				placeholder='John'
+				type='text'
+				name='firstName'
+			/>
+			<InputFormComponent
+				title='Nom de Famille'
+				placeholder='Martin'
+				type='text'
+				name='lastName'
+			/>
+			<InputFormComponent
 				title='Téléphone'
 				placeholder='07.00.01.02.03'
 				type='text'
@@ -39,6 +51,24 @@ export const RegisterComponent = ({ onRegister, navigate }: RegisterComponentPro
 				placeholder='25 rue de la paix'
 				type='text'
 				name='address'
+			/>
+			<InputFormComponent
+				title='Code Postal'
+				placeholder='75000'
+				type='text'
+				name='postalCode'
+			/>
+			<InputFormComponent
+				title='Ville'
+				placeholder='Paris'
+				type='text'
+				name='city'
+			/>
+			<InputFormComponent
+				title='Pays'
+				placeholder='France'
+				type='text'
+				name='country'
 			/>
 			<div className='login__button'>
 				<ButtonComponent
