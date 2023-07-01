@@ -9,6 +9,7 @@ import { HeaderComponent } from './cores/components/atoms/header/Header.componen
 import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
 import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
+import { ConfirmationContainer } from './pages/confirmation/Confirmation.container';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -31,6 +32,10 @@ export const App = () => (
 					path='/restaurant/:id'
 					element={<RestaurantContainer />}
 				/>
+				<Route
+					path='/order-confirmation'
+					element={< ConfirmationContainer/>}
+					/>
 			</Routes>
 			<BasketLayerContainer />
 		</BasketInfoProvider>
