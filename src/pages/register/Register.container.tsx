@@ -14,9 +14,24 @@ export const RegisterContainer = () => {
 		const formData = new FormData(e.target as HTMLFormElement);
 		const email = formData.get('email') as string;
 		const password = formData.get('password') as string;
-		const phoneNumber = formData.get('phoneNumber') as string;
+		const firstName = formData.get('firstName') as string;
+		const lastName = formData.get('lastName') as string;
+		const phone = formData.get('phoneNumber') as string;
 		const address = formData.get('address') as string;
-		const user: User = { email, password, phoneNumber, address };
+		const postalCode = formData.get('postalCode') as string;
+		const city = formData.get('city') as string;
+		const country = formData.get('country') as string;
+		const user: User = {
+			email,
+			password,
+			firstName,
+			lastName,
+			phone,
+			address,
+			postalCode: Number(postalCode),
+			city,
+			country,
+		};
 		mutate(user);
 	};
 
