@@ -9,14 +9,15 @@ interface ButtonProps {
 	designType: DesignType;
 	children: ReactNode;
 	onClick?: () => void;
+	className?: string
 }
 
-export const ButtonComponent = ({ type, designType, children, onClick }: ButtonProps) => (
+export const ButtonComponent = ({ type, designType, children, onClick, className }: ButtonProps) => (
 	<button
 		/* eslint-disable-next-line react/button-has-type */
 		type={type}
 		id={`${children}`}
-		className={`button ${designType === 'primary' ? 'button__primary' : 'button__secondary'}`}
+		className={className? className : `button ${designType === 'primary' ? 'button__primary' : 'button__secondary'}`}
 		onClick={onClick}
 	>
 		{children}

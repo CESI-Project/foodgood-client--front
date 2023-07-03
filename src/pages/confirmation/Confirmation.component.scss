@@ -1,4 +1,4 @@
-button{
+.confirmationButton{
     position: fixed;
     bottom: 2%;
     right: 0px; 
@@ -9,4 +9,14 @@ button{
 
 .foodCard{
     border-bottom: 1px solid black;
+}
+
+h2{
+    padding-top: 0;
+}
+
+.totalPrice{
+    position: fixed;
+    bottom: 10%;
+    left: 45%;
 }

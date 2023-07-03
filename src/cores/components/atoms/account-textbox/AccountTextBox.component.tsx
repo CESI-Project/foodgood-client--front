@@ -56,7 +56,8 @@ export const AccountTextBox = ({ id, name, value, onSave, inputtype }: AccountTe
 			autoFocus
 			onChange={(e) => setDisplayValue(e.target.value)}
 			/>
-			
+
+			<div id='accountButton'>
 			<ButtonComponent 
 			children="sauvegarder"
 			key={id}
@@ -70,6 +71,7 @@ export const AccountTextBox = ({ id, name, value, onSave, inputtype }: AccountTe
 			type='button'
 			designType='secondary'
 			onClick={() =>setIsInput(0)}/> 
+			</div>
 			</div>
 		}
 	
