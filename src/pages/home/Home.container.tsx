@@ -9,14 +9,14 @@ import { useUserContext } from '../../cores/contexts/user/User.context';
 export const HomeContainer = () => {
 	const { restaurants } = useRestaurants();
 	const { checkLogin } = useUserContext();
-
+	
 	useEffect(() => {
 		checkLogin();
 	});
 
 	const restaurantItems = restaurants?.map((restaurant: Restaurant) => (
 		<Link
-			to={`/restaurant/${restaurant.id}`}
+			to={`/restaurants/${restaurant.id}`}
 			key={restaurant.id}
 		>
 			<RestaurantItemComponent

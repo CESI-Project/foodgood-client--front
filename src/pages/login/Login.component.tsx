@@ -1,15 +1,14 @@
 import type { FormEvent } from 'react';
-import type { NavigateFunction } from 'react-router-dom';
 import { InputFormComponent } from '../../cores/components/molecules/input-form/InputForm.component';
 import { ButtonComponent } from '../../cores/components/atoms/button/Button.component';
 import './Login.component.scss';
 
 interface LoginComponentProps {
 	onLogin: (e: FormEvent<HTMLFormElement>) => void;
-	navigate: NavigateFunction;
+
 }
 
-export const LoginComponent = ({ onLogin, navigate }: LoginComponentProps) => (
+export const LoginComponent = ({ onLogin }: LoginComponentProps) => (
 	<div className='login'>
 		<div className='login__title'>Bienvenue sur GoodFood</div>
 		<form
@@ -39,7 +38,7 @@ export const LoginComponent = ({ onLogin, navigate }: LoginComponentProps) => (
 				<ButtonComponent
 					type='button'
 					designType='secondary'
-					onClick={() => navigate('/register')}
+					
 				>
 					S'inscrire
 				</ButtonComponent>

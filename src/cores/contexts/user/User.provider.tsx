@@ -13,19 +13,27 @@ export const UserInfoProvider = ({ children }: UserContextProviderProps) => {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const navigate = useNavigate();
 
+
+
 	const user = JSON.parse(sessionStorage.getItem('user') || '{}');
 
-	const checkLogin = () => {
-		const { accessToken } = user;
+    const checkLogin = () => {
+        const { token } = user;
 
-		if (accessToken) {
-			setCurrentUser(user);
-			setIsAuthenticated(true);
-		} else {
-			setIsAuthenticated(false);
-			navigate('/login');
-		}
-	};
+        if (token) {
+            setCurrentUser(user);
+            setIsAuthenticated(true);
+        } else {
+            setIsAuthenticated(false);
+            navigate('/login');
+        }
+    };
+
+    const logIn = () => {
+        setCurrentUser(user);
+        setIsAuthenticated(true);
+        navigate('/acceuil');
+    };
 
 	const logOut = () => {
 		setCurrentUser(undefined);
@@ -44,6 +52,7 @@ export const UserInfoProvider = ({ children }: UserContextProviderProps) => {
 		logOut,
 		isAuthenticated,
 		setIsAuthenticated,
+		logIn
 	};
 
 	return <UserContextProvider value={context}>{children}</UserContextProvider>;

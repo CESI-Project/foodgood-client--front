@@ -21,7 +21,7 @@ export const RestaurantContainer = () => {
 		<FoodItemContainer
 			id={food.id}
 			key={food.id}
-			restaurantId={food.restaurantId}
+			restaurantId={food.restaurant}
 			restaurantName={restaurant?.name}
 			name={food.name}
 			image={food.image}

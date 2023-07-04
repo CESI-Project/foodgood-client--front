@@ -1,6 +1,6 @@
 export interface Food {
 	id?: string;
-	restaurantId?: string;
+	restaurant?: string;
 	name?: string;
 	description?: string;
 	price?: number;
