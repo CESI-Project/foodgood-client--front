@@ -30,7 +30,7 @@ export const App = () => (
 					element={<RegisterContainer />}
 				/>
 				<Route
-					path='/restaurant/:id'
+					path='/restaurants/:id'
 					element={<RestaurantContainer />}
 				/>
 				<Route
