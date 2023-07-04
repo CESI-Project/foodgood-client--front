@@ -3,7 +3,7 @@ import { FoodItemComponent } from './FoodItem.component';
 import { useUserContext } from '../../../contexts/user/User.context.ts';
 
 interface FoodItemContainerProps {
-	id?: string;
+	_id?: string;
 	restaurantId?: string;
 	restaurantName?: string;
 	name?: string;
@@ -13,7 +13,7 @@ interface FoodItemContainerProps {
 }
 
 export const FoodItemContainer = ({
-	id,
+	_id,
 	name,
 	description,
 	price,
@@ -29,13 +29,13 @@ export const FoodItemContainer = ({
 			userId: currentUser?.id,
 			restaurantId,
 			restaurantName,
-			foods: [{ id, name, description, price, imageUrl }],
+			foods: [{ _id, name, description, price, imageUrl }],
 		});
 	};
 
 	return (
 		<FoodItemComponent
-			id={id}
+			id={_id}
 			name={name}
 			description={description}
 			price={price}

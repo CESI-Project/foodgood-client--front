@@ -19,8 +19,8 @@ export const RestaurantContainer = () => {
 
 	const foodItems = foods?.map((food: Food) => (
 		<FoodItemContainer
-			id={food.id}
-			key={food.id}
+			_id={food._id}
+			key={food._id}
 			restaurantId={food.restaurant}
 			restaurantName={restaurant?.name}
 			name={food.name}
