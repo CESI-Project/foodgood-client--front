@@ -4,24 +4,24 @@ import './RestaurantItem.component.scss';
 interface RestaurantItemComponentProps {
 	id?: string;
 	name?: string;
-	image?: string;
+	imageUrl?: string;
 	address?: string;
-	rating?: number;
+	rate?: number;
 }
 
-export const RestaurantItemComponent = ({ name, image, address, rating, id }: RestaurantItemComponentProps) => (
+export const RestaurantItemComponent = ({ name, imageUrl, address, rate, id }: RestaurantItemComponentProps) => (
 	<div
 		className='restaurant-item'
 		key={id}
 	>
 		<img
-			src={image}
+			src={imageUrl}
 			alt={name}
 		/>
 		<div className='restaurant-item__content'>
 			<div className='restaurant-item__content__name'>{name}</div>
 			<div className='restaurant-item__content__rating'>
-				{rating}
+				{rate}
 				<StarIcon />
 			</div>
 			<div className='restaurant-item__content__location'>

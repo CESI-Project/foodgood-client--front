@@ -24,7 +24,7 @@ export const RestaurantContainer = () => {
 			restaurantId={food.restaurant}
 			restaurantName={restaurant?.name}
 			name={food.name}
-			image={food.image}
+			imageUrl={food.imageUrl}
 			price={food.price}
 			description={food.description}
 		/>
@@ -32,11 +32,11 @@ export const RestaurantContainer = () => {
 
 	return (
 		<RestaurantComponent
-			id={restaurant?.id}
+			id={restaurant?._id}
 			name={restaurant?.name}
-			image={restaurant?.image}
+			imageUrl={restaurant?.imageUrl}
 			address={restaurant?.address}
-			rating={restaurant?.rating}
+			rate={restaurant?.rate}
 			foodItems={foodItems}
 		/>
 	);

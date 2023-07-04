@@ -9,7 +9,7 @@ interface FoodItemContainerProps {
 	name?: string;
 	description?: string;
 	price?: number;
-	image?: string;
+	imageUrl?: string;
 }
 
 export const FoodItemContainer = ({
@@ -17,7 +17,7 @@ export const FoodItemContainer = ({
 	name,
 	description,
 	price,
-	image,
+	imageUrl,
 	restaurantId,
 	restaurantName,
 }: FoodItemContainerProps) => {
@@ -29,7 +29,7 @@ export const FoodItemContainer = ({
 			userId: currentUser?.id,
 			restaurantId,
 			restaurantName,
-			foods: [{ id, name, description, price, image }],
+			foods: [{ id, name, description, price, imageUrl }],
 		});
 	};
 
@@ -39,7 +39,7 @@ export const FoodItemContainer = ({
 			name={name}
 			description={description}
 			price={price}
-			image={image}
+			imageUrl={imageUrl}
 			onSelect={onSelect}
 		/>
 	);

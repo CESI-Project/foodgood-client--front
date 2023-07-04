@@ -5,11 +5,11 @@ interface FoodItemComponentProps {
 	name?: string;
 	description?: string;
 	price?: number;
-	image?: string;
+	imageUrl?: string;
 	onSelect: () => void;
 }
 
-export const FoodItemComponent = ({ id, name, description, price, image, onSelect }: FoodItemComponentProps) => (
+export const FoodItemComponent = ({ id, name, description, price, imageUrl, onSelect }: FoodItemComponentProps) => (
 	<button
 		id={id}
 		key={id}
@@ -23,7 +23,7 @@ export const FoodItemComponent = ({ id, name, description, price, image, onSelec
 			<div className='food-item__content__price'>{price} €</div>
 		</div>
 		<img
-			src={image}
+			src={imageUrl}
 			alt={name}
 		/>
 	</button>

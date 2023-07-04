@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { FoodCategoryItemComponent } from './FoodCategoryItem.component';
-import { FOOD_CATEGORY } from '../../../enum/FoodCategory.enum';
+import { FOOD_CATEGORY } from '../../../enum/FoodType.enum';
 
 describe('FoodCategoryComponentItem', () => {
 	it('renders the food category component with correct image source, alt text and name', () => {

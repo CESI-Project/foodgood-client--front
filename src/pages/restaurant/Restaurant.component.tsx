@@ -6,19 +6,19 @@ interface RestaurantComponentProps {
 	id?: string;
 	name?: string;
 	address?: string;
-	rating?: number;
-	image?: string;
+	rate?: number;
+	imageUrl?: string;
 	foodItems?: ReactNode;
 }
 
-export const RestaurantComponent = ({ id, name, image, address, rating, foodItems }: RestaurantComponentProps) => (
+export const RestaurantComponent = ({ id, name, imageUrl, address, rate, foodItems }: RestaurantComponentProps) => (
 	<div className='restaurant'>
 		<RestaurantItemComponent
 			id={id}
 			name={name}
-			image={image}
+			imageUrl={imageUrl}
 			address={address}
-			rating={rating}
+			rate={rate}
 		/>
 		<div className='restaurant__food-item'>{foodItems}</div>
 	</div>

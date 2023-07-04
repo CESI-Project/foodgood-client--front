@@ -22,9 +22,9 @@ export const HomeContainer = () => {
 			<RestaurantItemComponent
 				id={restaurant._id}
 				name={restaurant.name}
-				image={restaurant.image}
+				imageUrl={restaurant.imageUrl}
 				address={restaurant.address}
-				rating={restaurant.rating}
+				rate={restaurant.rate}
 			/>
 		</Link>
 	));
