@@ -9,44 +9,46 @@ export default meta;
 
 type Story = StoryObj<typeof BasketFoodListComponent>;
 
-const fakeBasketFoodList = [{
-    foodName: "tacos",
-    foodPrice: 18,
-    foodQuantity: 1,
-    foodDescription: "tacos au foutre",
-    foodImage: "src/cores/assets/images/png/category/Tacos.png",
-    onAdd: () => { },
-    onDelete: () => { },
-},
-{
-    foodName: "tacos",
-    foodPrice: 18,
-    foodQuantity: 1,
-    foodDescription: "tacos au foutre",
-    foodImage: "src/cores/assets/images/png/category/Tacos.png",
-    onAdd: () => { },
-    onDelete: () => { },
-},
-{
-    foodName: "tacos",
-    foodPrice: 18,
-    foodQuantity: 1,
-    foodDescription: "tacos au foutre",
-    foodImage: "src/cores/assets/images/png/category/Tacos.png",
-    onAdd: () => { },
-    onDelete: () => { },
-},
-{
-    foodName: "tacos",
-    foodPrice: 18,
-    foodQuantity: 1,
-    foodDescription: "tacos au foutre tacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutretacos au foutre",
-    foodImage: "src/cores/assets/images/png/category/Tacos.png",
-    onAdd: () => { },
-    onDelete: () => { },
-}];
+const fakeBasketFoodList = [
+	{
+		foodName: 'tacos',
+		foodPrice: 18,
+		foodQuantity: 1,
+		foodDescription: 'tacos au tomate',
+		foodImage: 'src/cores/assets/images/png/category/Tacos.png',
+		onAdd: () => {},
+		onDelete: () => {},
+	},
+	{
+		foodName: 'tacos',
+		foodPrice: 18,
+		foodQuantity: 1,
+		foodDescription: 'tacos au tomate',
+		foodImage: 'src/cores/assets/images/png/category/Tacos.png',
+		onAdd: () => {},
+		onDelete: () => {},
+	},
+	{
+		foodName: 'tacos',
+		foodPrice: 18,
+		foodQuantity: 1,
+		foodDescription: 'tacos au tomate',
+		foodImage: 'src/cores/assets/images/png/category/Tacos.png',
+		onAdd: () => {},
+		onDelete: () => {},
+	},
+	{
+		foodName: 'tacos',
+		foodPrice: 18,
+		foodQuantity: 1,
+		foodDescription:
+			'tacos au tomate tacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomatetacos au tomate',
+		foodImage: 'src/cores/assets/images/png/category/Tacos.png',
+		onAdd: () => {},
+		onDelete: () => {},
+	},
+];
 
 export const Primary: Story = {
-	args: {basketFoodList: fakeBasketFoodList}
+	args: { basketFoodList: fakeBasketFoodList },
 };
-

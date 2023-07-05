@@ -7,7 +7,7 @@ interface ConfirmationComponentProps {
 	restaurantName: string;
 }
 
-export const OderConfirmationComponent = ({ restaurantName }: ConfirmationComponentProps) => (
+export const OrderConfirmationComponent = ({ restaurantName }: ConfirmationComponentProps) => (
 	<div>
 		<h2>Mon Panier</h2>
 		<div> {restaurantName} </div>

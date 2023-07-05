@@ -1,6 +1,6 @@
 import { useBasketContext } from '../../../contexts/basket/Basket.context';
 import { FoodItemComponent } from './FoodItem.component';
-import { useUserContext } from '../../../contexts/user/User.context.ts';
+import { useUserContext } from '../../../contexts/user/User.context';
 
 interface FoodItemContainerProps {
 	_id?: string;

@@ -1,13 +1,13 @@
 import type { FormEvent } from 'react';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import { RegisterComponent } from './Register.component';
 import type { User } from '../../cores/models/User';
 import { useRegister } from '../../cores/hooks/react-query/useUser';
-import {  useNavigate } from 'react-router-dom';
 
 export const RegisterContainer = () => {
 	const { mutate } = useRegister();
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const onRegister = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -33,18 +33,14 @@ export const RegisterContainer = () => {
 			country,
 		};
 		mutate(user, {
-            onSuccess: () => {
+			onSuccess: () => {
 				navigate('/login');
-            },
-            onError: () => {
-                toast.error('Inscription échouée', { toastId: 2 });
-            },
-        });
+			},
+			onError: () => {
+				toast.error('Inscription échouée', { toastId: 2 });
+			},
+		});
 	};
 
-	return (
-		<RegisterComponent
-			onRegister={onRegister}
-		/>
-	);
+	return <RegisterComponent onRegister={onRegister} />;
 };

@@ -1,5 +1,5 @@
 import { BACKEND_URI } from './index';
-import { authHeader } from '../utils/authHeader/authHeader';
+import { authHeader } from '../utils/authHeader';
 import type { Order } from '../models/Order';
 
 export const getOrderStatus = (id?: string): Promise<Order> =>

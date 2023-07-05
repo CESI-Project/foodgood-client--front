@@ -1,76 +1,80 @@
 @import "src/cores/assets/scss/main";
 
 
-.foodCard{
-    border-bottom: 1px solid black;
-    box-shadow: 0 4px 2px -2px gray;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.basket-food {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	border-bottom: 0.1rem solid black;
+	box-shadow: 0 0.4rem 0.2rem -0.2rem gray;
+
+	&__price-quantity {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding-top: 1rem;
+		padding-right: 1rem;
+		padding-bottom: 1rem;
+	}
 }
 
-.left{
-    width: 70%;
+.left {
+	width: 70%;
 }
 
-img{
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
+img {
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
 }
 
-.right{
-    width: 30%;
-    display: flex;
-    justify-content: end;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+.right {
+	display: flex;
+	width: 30%;
+	justify-content: end;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
 }
 
-.foodPriceQuantity{
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+
+.round-button {
+	display: inline-block;
+	overflow: hidden;
+	min-width: 3rem;
+	max-width: 5rem;
+	padding: 0;
+	border-style: none;
+	border-radius: 100%;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	background-color: #3498db;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
 }
 
-.round-button{
-    min-width: 3rem;
-    max-width:5rem;
-    text-decoration: none;
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    border-style: none;
-    color: white;
-    background-color: #3498db;
-    border-radius: 100%;
-    overflow: none;
-    text-align: center;
-    padding:0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .round-button:before {
-    content:'';
-    display:inline-block;;
-    vertical-align:middle;
-    padding-top:100%;
-  }
-  span {
-    display:inline-block;
-    vertical-align:middle;
-    max-width:90%;
-  }
-  .round-button:active{
-    background-color: #2980b9;
-  }
+.round-button::before {
+	display: inline-block;
+	padding-top: 100%;
+	content: '';
+	vertical-align: middle;
+}
 
-  h3{  
-    margin-top: 0;
-    text-transform: capitalize;
-    margin-bottom: 1rem; 
-  }
+span {
+	display: inline-block;
+	max-width: 90%;
+	vertical-align: middle;
+}
+
+.round-button:active {
+	background-color: #2980b9;
+}
+
+h3 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	text-transform: capitalize;
+}

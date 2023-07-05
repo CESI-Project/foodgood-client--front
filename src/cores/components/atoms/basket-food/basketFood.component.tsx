@@ -19,11 +19,11 @@ export const BasketFoodComponent = ({
 	onAdd,
 	onDelete,
 }: BasketFoodProps) => (
-	<div className='foodCard'>
+	<div className='basket-food'>
 		<div className='left'>
 			<h3>{foodName}</h3>
 			<div>{foodDescription}</div>
-			<div className='foodPriceQuantity'>
+			<div className='basket-food__price-quantity'>
 				<div>
 					{foodPrice}
 					{' €'}

@@ -1,6 +1,6 @@
 import type { User } from '../models/User';
 import { BACKEND_URI } from './index';
-import { authHeader } from '../utils/authHeader/authHeader.ts';
+import { authHeader } from '../utils/authHeader';
 
 export const postLogin = ({ email, password }: User): Promise<User> =>
 	fetch(`${BACKEND_URI}/users/login`, {

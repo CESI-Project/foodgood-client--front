@@ -1,22 +1,22 @@
-.confirmationButton{
-    position: fixed;
-    bottom: 2%;
-    right: 0px; 
-    width:50%;
-    margin-right:25%;
-    margin-left: 25%;
+.confirmationButton {
+	position: fixed;
+	right: 0;
+	bottom: 2%;
+	width: 50%;
+	margin-right: 25%;
+	margin-left: 25%;
 }
 
-.foodCard{
-    border-bottom: 1px solid black;
+.foodCard {
+	border-bottom: 0.1rem solid black;
 }
 
-h2{
-    padding-top: 0;
+h2 {
+	padding-top: 0;
 }
 
-.totalPrice{
-    position: fixed;
-    bottom: 10%;
-    left: 45%;
+.totalPrice {
+	position: fixed;
+	bottom: 10%;
+	left: 45%;
 }

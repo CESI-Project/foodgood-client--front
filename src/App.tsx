@@ -10,8 +10,8 @@ import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
 import { AccountContainer } from './pages/account/Account.container';
 import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
-import { OrderConfirmationContainer } from './pages/order-confirmation/OrderConfirmation.container.tsx';
-import { FollowOrderContainer } from './pages/follow-order/FollowOrder.container.tsx';
+import { OrderConfirmationContainer } from './pages/order-confirmation/OrderConfirmation.container';
+import { FollowOrderContainer } from './pages/follow-order/FollowOrder.container';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -19,11 +19,11 @@ export const App = () => (
 			<HeaderComponent />
 			<Routes>
 				<Route
-					path='*'
+					path='/accueil'
 					element={<HomeContainer />}
 				/>
 				<Route
-					path='/login'
+					path='*'
 					element={<LoginContainer />}
 				/>
 				<Route
