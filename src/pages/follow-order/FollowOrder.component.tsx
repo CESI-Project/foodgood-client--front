@@ -1,12 +1,10 @@
 import './FollowOrder.component.scss';
+import type { Order } from '../../cores/models/Order';
 
-interface FollowOrderComponentProps {
-	status: string;
-}
-
-export const FollowOrderComponent = ({ status }: FollowOrderComponentProps) => (
+export const FollowOrderComponent = ({ status }: Order) => (
 	<div className='follow-order'>
-		<h2>Votre Commande est :</h2>
-		<h2 className='follow-order__status'>{status}</h2>
+		<h2>
+			Votre Commande est : <span className='follow-order__status'>{status}</span>
+		</h2>
 	</div>
 );

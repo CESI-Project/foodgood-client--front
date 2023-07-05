@@ -12,7 +12,5 @@ export const FollowOrderContainer = () => {
 		checkLogin();
 	}, []);
 
-	// @ts-ignore
-	// Todo: delete ts-ignore
-	return <FollowOrderComponent status={order} />;
+	return <FollowOrderComponent status={order?.status} />;
 };
