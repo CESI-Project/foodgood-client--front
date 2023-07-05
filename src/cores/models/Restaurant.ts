@@ -1,7 +1,7 @@
-import type { FOOD_TYPE } from "cores/enum/FoodType.enum";
+import type { FOOD_TYPE } from '../enum/FoodType.enum';
 
 export interface Restaurant {
-	_id?: string;
+	id?: string;
 	name?: string;
 	imageUrl?: string;
 	rate?: number;
