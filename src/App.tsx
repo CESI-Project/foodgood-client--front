@@ -10,7 +10,7 @@ import { RestaurantContainer } from './pages/restaurant/Restaurant.container';
 import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
 import { AccountContainer } from './pages/account/Account.container';
 import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
-import { ConfirmationContainer } from './pages/confirmation/Confirmation.container';
+import { OrderConfirmationContainer } from './pages/order-confirmation/OrderConfirmation.container.tsx';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -39,7 +39,7 @@ export const App = () => (
 				/>
 				<Route
 					path='/order-confirmation'
-					element={<ConfirmationContainer />}
+					element={<OrderConfirmationContainer />}
 				/>
 			</Routes>
 			<BasketLayerContainer />
