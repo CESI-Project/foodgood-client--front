@@ -1,80 +1,94 @@
-import { AccountTextBox } from "../../cores/components/atoms/account-textbox/AccountTextBox.component";
 import './Account.component.scss';
+import type { FormEvent } from 'react';
+import { InputFormComponent } from '../../cores/components/molecules/input-form/InputForm.component';
+import { ButtonComponent } from '../../cores/components/atoms/button/Button.component';
 
-interface AccountComponentProps {
-    email: string,
-    firstname:string,
-    lastname: string,
-    phone: string,
-    address: string,
-    postalCode: string,
-    city: string,
-    country: string,
+interface AccountProps {
+	email?: string;
+	firstName?: string;
+	lastName?: string;
+	phone?: string;
+	address?: string;
+	postalCode?: number;
+	city?: string;
+	country?: string;
+	onSave: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-export const AccountComponent = ({email, firstname, lastname, phone, address, postalCode, city, country}: AccountComponentProps) => (
-
-			<div>
-                <h2>Mon compte</h2>
-                <ul>
-                <li>
-                <AccountTextBox
-                    name="email"
-                    value={email}
-                    onSave={() => console.log("email")}
-                    
-                    />
-                </li>
-                <li>
-                <AccountTextBox 
-                    name="Prénom"
-                    value={firstname}
-                    onSave={() => console.log("firstname")}
-                    />
-                
-                </li>
-                <li>
-                <AccountTextBox 
-                    name="Nom"
-                    value={lastname}
-                    onSave={() => console.log("lastname")}
-                    />
-                </li>
-                <li>
-                <AccountTextBox
-                    name="Téléphone"
-                    value={phone}
-                    onSave={() => console.log("phone")}
-                    />
-                </li>
-                <li>
-                <AccountTextBox
-                    name="Adresse"
-                    value={address}
-                    onSave={() => console.log("adress")}
-                    />  
-                </li>
-                <li>
-                <AccountTextBox
-                    name="Code postal"
-                    value={postalCode}
-                    onSave={() => console.log("postalCode")}
-                    />
-                    </li>
-                <li>
-                <AccountTextBox
-                    name="Ville"
-                    value={city}
-                    onSave={() => console.log("city")}
-                    />
-                    </li>
-                <li className="final">
-                <AccountTextBox
-                    name="Pays"
-                    value={country}
-                    onSave={() => console.log("country")}
-                    />
-                    </li>
-    </ul>
-            </div>
+export const AccountComponent = ({
+	email,
+	firstName,
+	lastName,
+	phone,
+	address,
+	postalCode,
+	city,
+	country,
+	onSave,
+}: AccountProps) => (
+	<div className='account'>
+		<div className='account__title'>Mon compte</div>
+		<form
+			className='account__form'
+			onSubmit={onSave}
+			id='account'
+		>
+			<InputFormComponent
+				title='Email'
+				defaultValue={email}
+				type='email'
+				name='email'
+			/>
+			<InputFormComponent
+				title='Prénom'
+				defaultValue={firstName}
+				type='text'
+				name='firstName'
+			/>
+			<InputFormComponent
+				title='Nom'
+				defaultValue={lastName}
+				type='text'
+				name='lastName'
+			/>
+			<InputFormComponent
+				title='Téléphone'
+				defaultValue={phone}
+				type='tel'
+				name='phone'
+			/>
+			<InputFormComponent
+				title='Adresse'
+				defaultValue={address}
+				type='text'
+				name='address'
+			/>
+			<InputFormComponent
+				title='Code postal'
+				defaultValue={postalCode}
+				type='number'
+				name='postalCode'
+			/>
+			<InputFormComponent
+				title='Ville'
+				defaultValue={city}
+				type='text'
+				name='city'
+			/>
+			<InputFormComponent
+				title='Pays'
+				defaultValue={country}
+				type='text'
+				name='country'
+			/>
+			<div className='account__button'>
+				<ButtonComponent
+					type='submit'
+					designType='primary'
+				>
+					Enregistrer
+				</ButtonComponent>
+			</div>
+		</form>
+	</div>
 );

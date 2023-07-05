@@ -34,13 +34,13 @@ export const App = () => (
 					element={<RestaurantContainer />}
 				/>
 				<Route
-					path='/Account'
+					path='/account'
 					element={<AccountContainer />}
-			  />
-        <Route
+				/>
+				<Route
 					path='/order-confirmation'
-					element={< ConfirmationContainer/>}
-        />
+					element={<ConfirmationContainer />}
+				/>
 			</Routes>
 			<BasketLayerContainer />
 		</BasketInfoProvider>
