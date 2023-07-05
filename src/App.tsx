@@ -11,6 +11,7 @@ import { BasketInfoProvider } from './cores/contexts/basket/Basket.provider';
 import { AccountContainer } from './pages/account/Account.container';
 import { BasketLayerContainer } from './cores/components/atoms/basket-layer/BasketLayer.container';
 import { OrderConfirmationContainer } from './pages/order-confirmation/OrderConfirmation.container.tsx';
+import { FollowOrderContainer } from './pages/follow-order/FollowOrder.container.tsx';
 
 export const App = () => (
 	<UserInfoProvider>
@@ -40,6 +41,10 @@ export const App = () => (
 				<Route
 					path='/order-confirmation'
 					element={<OrderConfirmationContainer />}
+				/>
+				<Route
+					path='/follow-order'
+					element={<FollowOrderContainer />}
 				/>
 			</Routes>
 			<BasketLayerContainer />
