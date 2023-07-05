@@ -35,7 +35,6 @@ export const RegisterContainer = () => {
 		mutate(user, {
             onSuccess: () => {
 				navigate('/login');
-				toast.success('Inscription réussie', { toastId: 1 });
             },
             onError: () => {
                 toast.error('Inscription échouée', { toastId: 2 });
