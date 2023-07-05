@@ -6,29 +6,29 @@ describe('RestaurantItemComponent', () => {
 		const restaurantItemProps = {
 			id: '1',
 			name: 'Restaurant Name',
-			image: 'restaurant.jpg',
+			imageUrl: 'restaurant.jpg',
 			address: '123 Main Street',
-			rating: 4.5,
+			rate: 4.5,
 		};
 
 		render(
 			<RestaurantItemComponent
 				id={restaurantItemProps.id}
 				name={restaurantItemProps.name}
-				image={restaurantItemProps.image}
+				imageUrl={restaurantItemProps.imageUrl}
 				address={restaurantItemProps.address}
-				rating={restaurantItemProps.rating}
+				rate={restaurantItemProps.rate}
 			/>,
 		);
 
 		const nameElement = screen.getByText(restaurantItemProps.name);
 		const imageElement = screen.getByAltText(restaurantItemProps.name);
-		const ratingElement = screen.getByText(restaurantItemProps.rating.toString());
+		const ratingElement = screen.getByText(restaurantItemProps.rate.toString());
 		const addressElement = screen.getByText(restaurantItemProps.address);
 
 		expect(nameElement).toBeInTheDocument();
 		expect(imageElement).toBeInTheDocument();
-		expect(imageElement).toHaveAttribute('src', restaurantItemProps.image);
+		expect(imageElement).toHaveAttribute('src', restaurantItemProps.imageUrl);
 		expect(ratingElement).toBeInTheDocument();
 		expect(addressElement).toBeInTheDocument();
 	});

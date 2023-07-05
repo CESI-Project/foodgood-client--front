@@ -1,8 +1,8 @@
-import type { FOOD_CATEGORY } from '../../../enum/FoodType.enum';
+import type { FOOD_TYPE } from '../../../enum/FoodType.enum';
 import './FoodCategoryItem.component.scss';
 
 interface FoodCategoryComponentItemProps {
-	foodCategory: FOOD_CATEGORY;
+	foodCategory: FOOD_TYPE;
 }
 
 export const FoodCategoryItemComponent = ({ foodCategory }: FoodCategoryComponentItemProps) => (

@@ -8,7 +8,7 @@ describe('FoodItemComponent', () => {
 			name: 'Pizza Margherita',
 			description: 'Delicious pizza with mozzarella and basil',
 			price: 8.99,
-			image: 'pizza.jpg',
+			imageUrl: 'pizza.jpg',
 			onSubmit: vi.fn(),
 		};
 
@@ -17,7 +17,7 @@ describe('FoodItemComponent', () => {
 				name={foodItemProps.name}
 				description={foodItemProps.description}
 				price={foodItemProps.price}
-				image={foodItemProps.image}
+				imageUrl={foodItemProps.imageUrl}
 				onSelect={foodItemProps.onSubmit}
 			/>,
 		);
@@ -31,6 +31,6 @@ describe('FoodItemComponent', () => {
 		expect(descriptionElement).toBeInTheDocument();
 		expect(priceElement).toBeInTheDocument();
 		expect(imageElement).toBeInTheDocument();
-		expect(imageElement).toHaveAttribute('src', foodItemProps.image);
+		expect(imageElement).toHaveAttribute('src', foodItemProps.imageUrl);
 	});
 });
