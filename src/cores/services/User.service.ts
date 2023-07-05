@@ -17,7 +17,7 @@ export const postLogin = ({ email, password }: User): Promise<User> =>
 		});
 
 export const postRegister = (register: User): Promise<User> =>
-	fetch(`${BACKEND_URI}/users/register`, {
+	fetch(`${BACKEND_URI}/users/signup`, {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(register),

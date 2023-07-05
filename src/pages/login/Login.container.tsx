@@ -4,10 +4,13 @@ import { LoginComponent } from './Login.component';
 import { useLogin } from '../../cores/hooks/react-query/useUser';
 import type { User } from '../../cores/models/User';
 import { useUserContext } from '../../cores/contexts/user/User.context';
+import { useNavigate } from 'react-router-dom';
+
 
 export const LoginContainer = () => {
     const { mutate } = useLogin();
     const { logIn } = useUserContext();
+    const navigate = useNavigate();
 
     const onLogin = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -25,5 +28,5 @@ export const LoginContainer = () => {
         });
     };
 
-    return <LoginComponent onLogin={onLogin} />;
+    return <LoginComponent onLogin={onLogin} navigateToRegister={navigate} />;
 };

@@ -1,5 +1,5 @@
-import { useMutation } from 'react-query';
-import { postLogin, postRegister } from '../../services/User.service';
+import { useMutation, useQuery } from 'react-query';
+import { getUser, postLogin, postRegister, putUser } from '../../services/User.service';
 
 export const useLogin = () => useMutation('login', postLogin);
 
