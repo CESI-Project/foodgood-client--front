@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { mealCategoryBar } from './mealCategoryBar.component';
+import { MealCategoryBar } from './MealCategoryBar.component';
 
-const meta: Meta<typeof mealCategoryBar> = {
+const meta: Meta<typeof MealCategoryBar> = {
 	title: 'mealCategoryBar',
-	component: mealCategoryBar,
+	component: MealCategoryBar,
 };
 export default meta;
 
-type Story = StoryObj<typeof mealCategoryBar>;
+type Story = StoryObj<typeof MealCategoryBar>;
 
 export const Primary: Story = {
 	args: {},

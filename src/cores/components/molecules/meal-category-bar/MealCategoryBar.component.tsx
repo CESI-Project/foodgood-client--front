@@ -2,7 +2,7 @@ import { MealCategoryItemComponent } from '../../atoms/meal-category-item/MealCa
 import { MEAL_TYPE } from '../../../enum/MealType.enum';
 import './mealCategoryBar.component.scss';
 
-export const mealCategoryBar = () => (
+export const MealCategoryBar = () => (
 	<div className='meal-category-bar'>
 		<MealCategoryItemComponent mealType={MEAL_TYPE.TACOS} />
 		<MealCategoryItemComponent mealType={MEAL_TYPE.PIZZA} />

@@ -12,7 +12,7 @@ export const HomeContainer = () => {
 
 	useEffect(() => {
 		checkLogin();
-	});
+	}, []);
 
 	const restaurantItems = restaurants?.map((restaurant: Restaurant) => (
 		<Link

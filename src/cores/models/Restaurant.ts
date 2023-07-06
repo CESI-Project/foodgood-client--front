@@ -1,10 +1,10 @@
-import type { meal_TYPE } from '../enum/mealType.enum';
+import type { MEAL_TYPE } from '../enum/MealType.enum';
 
 export interface Restaurant {
 	_id?: string;
 	name?: string;
 	imageUrl?: string;
 	rate?: number;
-	mealType?: meal_TYPE;
+	mealType?: MEAL_TYPE;
 	address?: string;
 }

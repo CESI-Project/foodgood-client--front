@@ -18,11 +18,12 @@ export const BasketInfoProvider = ({ children }: BasketProviderProps) => {
 		sessionStorage.removeItem('basket');
 	};
 
-	const addBasket = ({ userId, restaurantId, restaurantName, meals }: Basket) => {
+	const addBasket = ({ userId, restaurantId, restaurantName, foods }: Basket) => {
 		if (restaurantId === basket.restaurantId) {
-			const newMeals = [...basket.meals, ...(meals as Meal[])];
+			const newMeals = [...basket.foods, ...(foods as Meal[])];
 			const totalPrice = newMeals.reduce((acc, meal) => acc + meal.price, 0);
-			setCurrentBasket({ userId, restaurantId, restaurantName, totalPrice, meals: newMeals });
+			console.log(totalPrice);
+			setCurrentBasket({ userId, restaurantId, restaurantName, totalPrice, foods: newMeals });
 			sessionStorage.setItem(
 				'basket',
 				JSON.stringify({
@@ -30,14 +31,14 @@ export const BasketInfoProvider = ({ children }: BasketProviderProps) => {
 					restaurantId,
 					restaurantName,
 					totalPrice,
-					meals: newMeals,
+					foods: newMeals,
 				}),
 			);
 			return;
 		}
 
-		setCurrentBasket({ userId, restaurantId, restaurantName, meals });
-		sessionStorage.setItem('basket', JSON.stringify({ userId, restaurantId, restaurantName, meals }));
+		setCurrentBasket({ userId, restaurantId, restaurantName, foods });
+		sessionStorage.setItem('basket', JSON.stringify({ userId, restaurantId, restaurantName, foods }));
 	};
 
 	const context = {

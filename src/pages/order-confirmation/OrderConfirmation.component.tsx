@@ -3,7 +3,7 @@ import { ButtonComponent } from '../../cores/components/atoms/button/Button.comp
 import './OrderConfirmation.component.scss';
 
 interface ConfirmationComponentProps {
-	restaurantName: string;
+	restaurantName?: string;
 	mealItems: ReactNode;
 	onConfirm: () => void;
 	totalPrice?: number;

@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { mealCategoryItemComponent } from './mealCategoryItem.component';
-import { meal_TYPE } from '../../../enum/mealType.enum';
+import { MealCategoryItemComponent } from './MealCategoryItem.component';
+import { MEAL_TYPE } from '../../../enum/MealType.enum';
 
-const meta: Meta<typeof mealCategoryItemComponent> = {
+const meta: Meta<typeof MealCategoryItemComponent> = {
 	title: 'mealCategoryItem',
-	component: mealCategoryItemComponent,
+	component: MealCategoryItemComponent,
 };
 export default meta;
 
-type Story = StoryObj<typeof mealCategoryItemComponent>;
+type Story = StoryObj<typeof MealCategoryItemComponent>;
 
 export const Primary: Story = {
 	args: {
-		mealCategory: meal_TYPE.TACOS,
+		mealType: MEAL_TYPE.TACOS,
 	},
 };

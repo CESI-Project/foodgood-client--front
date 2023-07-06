@@ -19,16 +19,14 @@ export const OrderConfirmationContainer = () => {
 		checkLogin();
 	}, []);
 
-	const mealItems = currentBasket?.meals?.map((meal: Meal) => (
+	const mealItems = currentBasket?.foods?.map((meal: Meal) => (
 		<MealItemContainer
-			_id={meal._id}
-			key={meal._id}
-			restaurantId={meal.restaurant}
+			_id={meal.meal._id}
+			key={meal.meal._id}
 			restaurantName={currentBasket?.restaurantName}
-			name={meal.name}
-			imageUrl={meal.imageUrl}
+			name={meal.meal.name}
+			imageUrl={meal.meal.imageUrl}
 			price={meal.price}
-			description={meal.description}
 		/>
 	));
 
@@ -36,7 +34,11 @@ export const OrderConfirmationContainer = () => {
 		const order = {
 			user: currentUser?.userId,
 			restaurant: currentBasket?.restaurantId,
-			meals: currentBasket?.meals,
+			foods: currentBasket?.foods?.map(meal => ({
+				meal: meal.meal._id,
+				quantity: meal.quantity,
+				price: meal.price,
+			})),
 			totalPrice: currentBasket?.totalPrice,
 			status: 'waiting',
 		};
@@ -55,7 +57,7 @@ export const OrderConfirmationContainer = () => {
 
 	return (
 		<OrderConfirmationComponent
-			restaurantName='test nom de restaurant'
+			restaurantName={currentBasket?.restaurantName}
 			mealItems={mealItems}
 			onConfirm={onConfirm}
 			totalPrice={currentBasket?.totalPrice}

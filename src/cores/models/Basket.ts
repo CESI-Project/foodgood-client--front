@@ -6,7 +6,7 @@ export interface Basket {
 	userId?: string;
 	restaurantId?: string;
 	restaurantName?: string;
-	meals?: { meal: Meal; quantity: number; price: number }[];
+	foods?: { meal: Meal; quantity: number; price: number }[];
 	totalPrice?: number;
 	status?: STATUS_ENUM;
 }

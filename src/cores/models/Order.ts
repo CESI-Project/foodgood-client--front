@@ -7,7 +7,7 @@ export interface Order {
 	user?: string;
 	restaurant?: Restaurant;
 	deliveryDriver?: string;
-	meals?: { meal: Meal; quantity: number; price: number }[];
+	foods?: { meal: Meal; quantity: number; price: number }[];
 	orderDate?: string;
 	totalPrice?: number;
 	status?: STATUS_ENUM;

@@ -9,6 +9,7 @@ interface MealItemContainerProps {
 	name?: string;
 	description?: string;
 	price?: number;
+	type?: string;
 	imageUrl?: string;
 }
 
@@ -18,6 +19,7 @@ export const MealItemContainer = ({
 	description,
 	price,
 	imageUrl,
+	type,
 	restaurantId,
 	restaurantName,
 }: MealItemContainerProps) => {
@@ -29,7 +31,19 @@ export const MealItemContainer = ({
 			userId: currentUser?.userId,
 			restaurantId,
 			restaurantName,
-			meals: [{ _id, name, description, price: Number(price), imageUrl }],
+			foods: [
+				{
+					meal: {
+						_id,
+						name,
+						type,
+						price: Number(price),
+						imageUrl,
+					},
+					quantity: 1,
+					price: Number(price),
+				},
+			],
 		});
 	};
 

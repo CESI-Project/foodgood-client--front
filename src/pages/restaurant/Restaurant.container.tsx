@@ -26,6 +26,7 @@ export const RestaurantContainer = () => {
 			name={meal.name}
 			imageUrl={meal.imageUrl}
 			price={meal.price}
+			type={meal.type}
 			description={meal.description}
 		/>
 	));
