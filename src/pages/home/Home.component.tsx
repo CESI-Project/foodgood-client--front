@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { SearchIcon } from '../../cores/assets/images/icons';
 import { InputComponent } from '../../cores/components/atoms/input/Input.component';
-import { FoodCategoryBar } from '../../cores/components/molecules/food-category-bar/FoodCategoryBar.component';
 import './Home.component.scss';
 
 interface HomeComponentProps {
@@ -16,7 +15,7 @@ export const HomeComponent = ({ restaurantItems }: HomeComponentProps) => (
 			type='text'
 			icon={<SearchIcon />}
 		/>
-		<FoodCategoryBar />
+		{/* <FoodCategoryBar /> */}
 		<div className='home__restaurant'>{restaurantItems}</div>
 	</div>
 );

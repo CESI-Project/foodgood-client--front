@@ -1,33 +1,24 @@
-// get order and restaurant information
-
 import { ButtonComponent } from '../../cores/components/atoms/button/Button.component';
 import './OrderConfirmation.component.scss';
+import type { ReactNode } from 'react';
 
 interface ConfirmationComponentProps {
 	restaurantName: string;
+	foodItems: ReactNode;
 }
 
-export const OrderConfirmationComponent = ({ restaurantName }: ConfirmationComponentProps) => (
-	<div>
-		<h2>Mon Panier</h2>
-		<div> {restaurantName} </div>
-		{/* add link to restaurant/id from order */}
-		<h2>Liste d'articles</h2>
-		{
-			//* TODO: list all items in the cart and adresse de livraison
-		}
-
-		<div className='totalPrice'>
-			Prix Total : 12.36
-			{/* get total price from back  */}
-		</div>
-
+export const OrderConfirmationComponent = ({ restaurantName, foodItems }: ConfirmationComponentProps) => (
+	<div className='order-confirmation'>
+		<h2 className='order-confirmation__title'>Mon Panier</h2>
+		<div>{restaurantName}</div>
+		<h2 className='order-confirmation__title'>Liste d'articles</h2>
+		{foodItems}
+		<div className='order-confirmation__total-price'>Prix Total : 12.36</div>
 		<ButtonComponent
 			type='button'
 			designType='primary'
-			className='confirmationButton button__primary'
 		>
-			valider la commande
+			Valider la commande
 		</ButtonComponent>
 	</div>
 );
