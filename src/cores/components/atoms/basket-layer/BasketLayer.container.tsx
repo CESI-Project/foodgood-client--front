@@ -6,5 +6,9 @@ export const BasketLayerContainer = () => {
 	const location = useLocation();
 	const { currentBasket } = useBasketContext();
 
-	return currentBasket && location.pathname!="/order-confirmation" ? <BasketLayerComponent currentBasket={currentBasket} /> : <div />;
+	return currentBasket && location.pathname !== '/order-confirmation' ? (
+		<BasketLayerComponent currentBasket={currentBasket} />
+	) : (
+		<div />
+	);
 };

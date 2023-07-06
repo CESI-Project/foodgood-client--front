@@ -1,15 +1,21 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import type { User } from '../../models/User';
 import { UserContextProvider } from './User.context';
+import type { ROLE } from '../../enum/Role.enum';
 
 interface UserContextProviderProps {
 	children: ReactNode;
 }
 
+export interface UserContextProps {
+	userId: string;
+	role: ROLE;
+	token: string;
+}
+
 export const UserInfoProvider = ({ children }: UserContextProviderProps) => {
-	const [currentUser, setCurrentUser] = useState<User>();
+	const [currentUser, setCurrentUser] = useState<UserContextProps>();
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const navigate = useNavigate();
 

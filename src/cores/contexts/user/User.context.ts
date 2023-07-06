@@ -1,9 +1,9 @@
 import { createContext, useContext } from 'react';
-import type { User } from '../../models/User';
+import type { UserContextProps } from './User.provider';
 
 export interface UserInfo {
-	currentUser?: User;
-	setCurrentUser: (user: User | undefined) => void;
+	currentUser?: UserContextProps;
+	setCurrentUser: (user: UserContextProps | undefined) => void;
 	checkLogin: () => void;
 	logOut: () => void;
 	isAuthenticated: boolean;

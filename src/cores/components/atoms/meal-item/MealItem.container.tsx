@@ -1,8 +1,8 @@
 import { useBasketContext } from '../../../contexts/basket/Basket.context';
-import { FoodItemComponent } from './FoodItem.component';
+import { MealItemComponent } from './MealItem.component';
 import { useUserContext } from '../../../contexts/user/User.context';
 
-interface FoodItemContainerProps {
+interface MealItemContainerProps {
 	_id?: string;
 	restaurantId?: string;
 	restaurantName?: string;
@@ -12,7 +12,7 @@ interface FoodItemContainerProps {
 	imageUrl?: string;
 }
 
-export const FoodItemContainer = ({
+export const MealItemContainer = ({
 	_id,
 	name,
 	description,
@@ -20,21 +20,21 @@ export const FoodItemContainer = ({
 	imageUrl,
 	restaurantId,
 	restaurantName,
-}: FoodItemContainerProps) => {
+}: MealItemContainerProps) => {
 	const { currentUser } = useUserContext();
 	const { addBasket } = useBasketContext();
 
 	const onSelect = () => {
 		addBasket({
-			userId: currentUser?.id,
+			userId: currentUser?.userId,
 			restaurantId,
 			restaurantName,
-			foods: [{ _id, name, description, price, imageUrl }],
+			meals: [{ _id, name, description, price: Number(price), imageUrl }],
 		});
 	};
 
 	return (
-		<FoodItemComponent
+		<MealItemComponent
 			id={_id}
 			name={name}
 			description={description}

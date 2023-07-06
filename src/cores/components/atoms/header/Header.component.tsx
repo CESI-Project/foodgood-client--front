@@ -5,7 +5,7 @@ import './Header.component.scss';
 export const HeaderComponent = () => (
 	<div className='header'>
 		<Link
-			to='/'
+			to='/accueil'
 			data-testid='logo-icon'
 		>
 			<LogoTitleIcon />

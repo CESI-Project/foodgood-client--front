@@ -15,7 +15,7 @@ export const HomeComponent = ({ restaurantItems }: HomeComponentProps) => (
 			type='text'
 			icon={<SearchIcon />}
 		/>
-		{/* <FoodCategoryBar /> */}
+		{/* <mealCategoryBar /> */}
 		<div className='home__restaurant'>{restaurantItems}</div>
 	</div>
 );

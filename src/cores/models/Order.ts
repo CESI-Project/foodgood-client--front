@@ -1,4 +1,4 @@
-import type { Food } from './Food';
+import type { Meal } from './Meal';
 import type { Restaurant } from './Restaurant';
 import type { STATUS_ENUM } from '../enum/Status.enum';
 
@@ -7,7 +7,7 @@ export interface Order {
 	user?: string;
 	restaurant?: Restaurant;
 	deliveryDriver?: string;
-	foods?: { food: Food; quantity: number; price: number }[];
+	meals?: { meal: Meal; quantity: number; price: number }[];
 	orderDate?: string;
 	totalPrice?: number;
 	status?: STATUS_ENUM;

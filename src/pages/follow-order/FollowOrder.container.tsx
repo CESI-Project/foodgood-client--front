@@ -5,8 +5,8 @@ import { useOrderStatus } from '../../cores/hooks/react-query/useOrder';
 
 export const FollowOrderContainer = () => {
 	const { checkLogin } = useUserContext();
-	// const { currentBasket } = useBasketContext();
-	const { order } = useOrderStatus('64a42925b73dfbd4811e4a5c');
+	const orderId: string | null = JSON.parse(localStorage.getItem('orderId') || '{}');
+	const { order } = useOrderStatus(orderId || undefined);
 
 	useEffect(() => {
 		checkLogin();

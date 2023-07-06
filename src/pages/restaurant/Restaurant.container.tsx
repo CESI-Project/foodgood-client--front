@@ -1,32 +1,32 @@
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { RestaurantComponent } from './Restaurant.component';
-import { FoodItemContainer } from '../../cores/components/atoms/food-item/FoodItem.container';
+import { MealItemContainer } from '../../cores/components/atoms/meal-item/MealItem.container';
 import { useRestaurant } from '../../cores/hooks/react-query/useRestaurant';
-import { useFood } from '../../cores/hooks/react-query/useFood';
-import type { Food } from '../../cores/models/Food';
+import { useMeal } from '../../cores/hooks/react-query/useMeal';
+import type { Meal } from '../../cores/models/Meal';
 import { useUserContext } from '../../cores/contexts/user/User.context';
 
 export const RestaurantContainer = () => {
 	const { id } = useParams<{ id: string }>();
 	const { restaurant } = useRestaurant(id);
-	const { foods } = useFood(id);
+	const { meals } = useMeal(id);
 	const { checkLogin } = useUserContext();
 
 	useEffect(() => {
 		checkLogin();
 	}, []);
 
-	const foodItems = foods?.map((food: Food) => (
-		<FoodItemContainer
-			_id={food._id}
-			key={food._id}
-			restaurantId={food.restaurant}
+	const mealItems = meals?.map((meal: Meal) => (
+		<MealItemContainer
+			_id={meal._id}
+			key={meal._id}
+			restaurantId={meal.restaurant}
 			restaurantName={restaurant?.name}
-			name={food.name}
-			imageUrl={food.imageUrl}
-			price={food.price}
-			description={food.description}
+			name={meal.name}
+			imageUrl={meal.imageUrl}
+			price={meal.price}
+			description={meal.description}
 		/>
 	));
 
@@ -37,7 +37,7 @@ export const RestaurantContainer = () => {
 			imageUrl={restaurant?.imageUrl}
 			address={restaurant?.address}
 			rate={restaurant?.rate}
-			foodItems={foodItems}
+			mealItems={mealItems}
 		/>
 	);
 };

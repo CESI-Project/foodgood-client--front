@@ -15,7 +15,7 @@ export const Primary: Story = {
 			userId: '1',
 			restaurantId: '1',
 			restaurantName: 'Pizza Hut',
-			foods: [
+			meals: [
 				{
 					_id: '1',
 					restaurant: '1',

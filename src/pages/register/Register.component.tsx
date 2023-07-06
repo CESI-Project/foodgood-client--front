@@ -8,7 +8,7 @@ interface RegisterComponentProps {
 
 export const RegisterComponent = ({ onRegister }: RegisterComponentProps) => (
 	<div className='login'>
-		<div className='login__title'>Bienvenue sur GoodFood</div>
+		<div className='login__title'>Bienvenue sur Goodmeal</div>
 		<form
 			id='login'
 			onSubmit={onRegister}

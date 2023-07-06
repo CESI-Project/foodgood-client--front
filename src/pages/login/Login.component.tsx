@@ -11,7 +11,7 @@ interface LoginComponentProps {
 
 export const LoginComponent = ({ onLogin, navigateToRegister }: LoginComponentProps) => (
 	<div className='login'>
-		<div className='login__title'>Bienvenue sur GoodFood</div>
+		<div className='login__title'>Bienvenue sur Goodmeal</div>
 		<form
 			id='login'
 			onSubmit={onLogin}

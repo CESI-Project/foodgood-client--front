@@ -1,8 +1,8 @@
 import { authHeader } from '../utils/authHeader';
-import type { Food } from '../models/Food';
+import type { Meal } from '../models/Meal';
 import { BACKEND_URI } from './index';
 
-export const getFoods = (restaurantId?: string): Promise<Food[]> =>
+export const getMeals = (restaurantId?: string): Promise<Meal[]> =>
 	fetch(`${BACKEND_URI}/meals/byRestaurant/${restaurantId}`, { headers: authHeader() }).then(response =>
 		response.json(),
 	);
